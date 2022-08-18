@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Silkscreen';
+    src: url('Silkscreen-Bold.eot');
+    src: url('Silkscreen-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Silkscreen-Bold.woff2') format('woff2'),
+        url('Silkscreen-Bold.woff') format('woff'),
+        url('Silkscreen-Bold.ttf') format('truetype'),
+        url('Silkscreen-Bold.svg#Silkscreen-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Silkscreen';
+    src: url('Silkscreen-Regular.eot');
+    src: url('Silkscreen-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Silkscreen-Regular.woff2') format('woff2'),
+        url('Silkscreen-Regular.woff') format('woff'),
+        url('Silkscreen-Regular.ttf') format('truetype'),
+        url('Silkscreen-Regular.svg#Silkscreen-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
