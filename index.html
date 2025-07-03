@@ -92,6 +92,30 @@
 			opacity: 0.7;
 		}
 
+		ul.icons {
+			text-align: center;
+			padding: 0;
+			list-style: none;
+		}
+
+		ul.icons .icon-circle {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 64px;
+			height: 64px;
+			margin: 0 10px;
+			border-radius: 50%;
+			background-color: #333; /* or your preferred background */
+		}
+
+		ul.icons .icon-circle img {
+			width: 32px;
+			height: 32px;
+			object-fit: contain;
+		}
+
+
     </style>
 </head>
 <body class="is-preload">
@@ -103,9 +127,10 @@
     <div id="wrapper">
         <!-- Header -->
         <header id="header">
-			<div class="logo">
-				<img src="images/face-icon.png" alt="Logo" width="64" height="64" style="display:block; margin: 0 auto;" />
-			</div>			
+			<div class="logo icon-circle">
+				<img src="images/face-icon.png" alt="Logo" />
+			</div>
+					
             <div class="content">
                 <div class="inner">
                     <h1 style="font-family: 'Silkscreen'; font-weight: bold; font-style: normal;">Shehryar Malik</h1>
@@ -331,15 +356,15 @@
                     <br/>Contact number: +92-332-9318456
                 </p>
                 
-				<ul class="icons" style="text-align:center; list-style: none; padding: 0;">
-					<li style="display: inline-block; margin: 0 10px;">
+				<ul class="icons">
+					<li class="icon-circle">
 						<a href="https://www.linkedin.com/in/shehryarmalik07" target="_blank">
-							<img src="images/linkedin-icon.png" alt="LinkedIn" width="32" height="32" />
+							<img src="images/linkedin-icon.png" alt="LinkedIn" />
 						</a>
 					</li>
-					<li style="display: inline-block; margin: 0 10px;">
+					<li class="icon-circle">
 						<a href="https://github.com/ShehryarMalik" target="_blank">
-							<img src="images/github-icon.png" alt="GitHub" width="32" height="32" />
+							<img src="images/github-icon.png" alt="GitHub" />
 						</a>
 					</li>
 				</ul>
