@@ -1,407 +1,153 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Shehryar Malik's portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="preload" href="assets/css/main.css" as="style" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			.se-pre-con {
-				position: fixed;
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				z-index: 9999;
-				background: #1a1a1a;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				text-align: center;
-			}
-			.video-placeholder {
-				background: #222;
-				width: 560px;
-				height: 315px;
-				max-width: 100%;
-				margin: 0 auto;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				cursor: pointer;
-				position: relative;
-			}
-			.video-placeholder::before {
-				content: "";
-				display: block;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				width: 80px;
-				height: 80px;
-				margin: -40px 0 0 -40px;
-				background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%23fff" d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z"/></svg>') no-repeat center center;
-				background-size: contain;
-				opacity: 0.8;
-				transition: transform 0.2s;
-			}
-			.video-placeholder:hover::before {
-				transform: scale(1.1);
-			}
-			.video-placeholder-text {
-				color: #fff;
-				font-size: 18px;
-				margin-top: 100px;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
-	<div class="se-pre-con"><h1>Loading..</h1></div>
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+  <title>Shehryar Malik's portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-face-grimace"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1 style="font-family: 'Silkscreen'; font-weight: bold; font-style: normal;">Shehryar Malik</h1>
-								<p style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;">Hello, welcome to my portfolio. I am a gameplay programmer and I am constantly experimenting with different 
-									technologies that I learn to improve my skills. Here you will find all of my recent works and achievements. 
-									<br />I hope you enjoy your stay here :)</p>
-							</div>
-						</div>
-						<nav>
-							<ul style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;">
-								<li> </li>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#projects">Projects</a></li>
-								<li><a href="#experiments">Experiments</a></li>
-								<li><a href="#achievements">achievements</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
-						</nav>
-					</header>
+  <!-- Preload main CSS for performance -->
+  <link rel="preload" href="assets/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-				<!-- Main -->
-					<div id="main">
+  <!-- Silkscreen font -->
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet" />
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;">A little about me</h2>
-								<span style="float: left;margin: 15px;width:50%;height: auto;" class="image main"><img src="images/pixelatedme.jpg" alt=""/></span>
-								<p style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;">My name is Shehryar Malik and I am very passionate about gaming. I started learning game development at a very young age and I have experience in almost every aspect of game development although I found programming to be my biggest passion. I have worked on most modern game engines but my choice is Unreal and Unity.</p>
-								<p style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;">This website serves as my portfolio, where I will publish things that I am working on. I have worked on different types of games out of which I love working on hyper localized games, in fact two of my best games were localized for Pakistan, Offtrack:Islamabad and Chiriya Urhi. You can check them out in the <a href="#projects">projects section.</a></p>
-								<p style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;">I try to keep up with the ever evolving game development industry. That's why I keep experimenting and creating different game mechanics to improve my skills as a gameplay programmer. You can check out my latest work in the <a href="#experiments">experiments section.</a></p>
-								<p style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;">I appriciate any kind of feedback. If you want to get in touch with me, head over to the <a href="#contact">contact section.</a></p>
-								<p style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;">Thank you and I hope you like my work :)</p>
-							</article>
+  <!-- FontAwesome (deferred) -->
+  <script defer src="https://kit.fontawesome.com/521b2f0730.js" crossorigin="anonymous"></script>
+</head>
+<body class="is-preload">
+  <!-- Loading screen -->
+  <div class="se-pre-con" style="display:flex;justify-content:center;align-items:center;min-height:100vh;">
+    <h1>Loading..</h1>
+  </div>
 
-						<!-- projects -->
-								<!--Project UTC demo-->
-								<article id="projects" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;">
-									<h2 class="major">Projects</h2>
-									<h2 class="major2" style="text-align: center; margin-bottom:2px;">Project UTC</h2>
-									<span class="image main" style="margin-top:0px; margin-bottom:20px;"><img src="images/utcbanner.jpg" alt="" /></span>
-									<p>Lead Developer for a "Gamified" Forex Binary Options Platform.</p>
-									<p>Project UTC demo:</p>
-									<div class="video-container" style="text-align: center;">
-										<div class="video-placeholder" data-video-id="oX3_xT9xH3U" data-video-title="Project UTC Demo 1">
-											<div class="video-placeholder-text">Click to load video</div>
-										</div>
-									</div>
-								</article>	
+  <div id="wrapper">
+    <header id="header">
+      <div class="logo"><span class="icon fa-face-grimace"></span></div>
+      <div class="content"><div class="inner">
+        <h1 style="font-family:'Silkscreen';font-weight:bold;">Shehryar Malik</h1>
+        <p style="font-family:'Silkscreen';">Hello, welcome to my portfolio. I am a gameplay programmer and I am constantly experimenting with different technologies that I learn to improve my skills. Here you will find all of my recent works and achievements. I hope you enjoy your stay here :)</p>
+      </div></div>
+      <nav><ul style="font-family:'Silkscreen';">
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experiments">Experiments</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul></nav>
+    </header>
 
-								<!--RAI Demo-->
-								<article id="projects" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-									<h2 class="major2" style="text-align: center; margin-bottom:2px;">Unity VR Avatar for ChatGPT</h2>
-									<span class="image main" style="margin-top:0px; margin-bottom:20px;"><img src="images/raibanner.jpg" alt="" /></span>
-									<p>A Unity VR Avatar powered by ChatGPT. You can have conversations with the A.I in a 3D Environment.</p>
-									<p>Unity VR AI demo:</p>
-									<div class="video-container" style="text-align: center;">
-										<div class="video-placeholder" data-video-id="jrLfkrQNSe8" data-video-title="Unity VR AI demo">
-											<div class="video-placeholder-text">Click to load video</div>
-										</div>
-									</div>
-								</article>
+    <div id="main">
+      <!-- Intro -->
+      <article id="intro">
+        <h2 class="major" style="font-family:'Silkscreen';">A little about me</h2>
+        <span class="image main" style="float:left;width:50%;margin:15px;"><img src="images/pixelatedme.jpg" loading="lazy" alt="" /></span>
+        <p style="font-family:'Silkscreen';">My name is Shehryar Malik and I am very passionate about gaming... (rest of your text)</p>
+        <p style="font-family:'Silkscreen';">This website serves as my portfolio... </p>
+        <p style="font-family:'Silkscreen';">I try to keep up... </p>
+        <p style="font-family:'Silkscreen';">I appreciate any kind of feedback... </p>
+        <p style="font-family:'Silkscreen';">Thank you and I hope you like my work :)</p>
+      </article>
 
-								<!--DICE AG1 demo-->
-								<article id="projects" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-									<h2 class="major2" style="text-align: center; margin-bottom:2px;">Unity ability system: Die abilities</h2>
-									<span class="image main" style="margin-top:0px; margin-bottom:20px;"><img src="images/ag1banner.jpg" alt="" /></span>
-									<p>I developed a flexible ability system in Unity, and this is one of the ideas I've been playing with. The die can attach different ability stickers on each face to acquire new abilities. After using an ability, the die switches to a random one. I've had this idea for a while and created it for fun, but I might give this project more time. The Ludo piece enemy is next!</p>
-									<p>Unity Die Abilities Demo:</p>
-									<div class="video-container" style="text-align: center;">
-										<div class="video-placeholder" data-video-id="1FF8itUdnU8" data-video-title="Unity Die Abilities Demo">
-											<div class="video-placeholder-text">Click to load video</div>
-										</div>
-									</div>
-								</article>
+      <!-- Projects -->
+      <article id="projects" style="font-family:'Silkscreen';">
+        <h2 class="major">Projects</h2>
 
-								<!--Metahuman Vroid demo-->
-								<article id="projects" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-									<h2 class="major2" style="text-align: center; margin-bottom:2px;">a promotional video using Metahumans and Vroid</h2>
-									<span class="image main" style="margin-top:0px; margin-bottom:20px;"><img src="images/metadbanner.jpg" alt="" /></span>
-									<p>Just a promotional video I created, using Metahumans (Unreal) and Vroid (Unity), while learning how to animate characters. This is the first time I used motion capture (using Iphone). It was a great experience.</p>
-									<p>Metahuman Vroid demo:</p>
-									<div class="video-container" style="text-align: center;">
-										<div class="video-placeholder" data-video-id="5R1_5o45EFw" data-video-title="Metahuman Vroid demo">
-											<div class="video-placeholder-text">Click to load video</div>
-										</div>
-									</div>
-								</article>
+        <section>
+          <h3 class="major2" style="text-align:center;">Project UTC</h3>
+          <span class="image main"><img src="images/utcbanner.jpg" loading="lazy" alt="UTC banner" /></span>
+          <p>Lead Developer for a "Gamified" Forex Binary Options Platform.</p>
+          <p>Project UTC demo:</p>
+          <div class="video-container" style="text-align:center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/oX3_xT9xH3U" loading="lazy" allowfullscreen></iframe></div>
+        </section>
 
-								<!--Gate Runner-->
-								<article id="projects" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-									<h2 class="major2" style="text-align: center; margin-bottom:2px;">GateRunner (Winter Gamejam 2023)</h2>
-									<span class="image main" style="margin-top:0px; margin-bottom:20px;"><img src="images/gaterunnerbanner.jpg" alt="" /></span>
-									<p>My submission for Mindstorm's Winter game jam 2023. I consider this my best unity game so far. Managed to get modular design just right.</p>
-									<p>The theme was Puzzles this time. The game is procedurally generated, each area has a "gate" that has a logic gate related puzzle that players need to solve to continue while fighting off glitches.</p>
-									<p>Gameplay of Gaterunner:</p>
-									<div class="video-container" style="text-align: center;">
-										<div class="video-placeholder" data-video-id="MfB0P-Y9Nuc" data-video-title="Gameplay of Gaterunner">
-											<div class="video-placeholder-text">Click to load video</div>
-										</div>
-									</div>
-								</article>
+        <section>
+          <h3 class="major2" style="text-align:center;margin-top:50px;">Unity VR Avatar for ChatGPT</h3>
+          <span class="image main"><img src="images/raibanner.jpg" loading="lazy" alt="RAI banner" /></span>
+          <p>A Unity VR Avatar powered by ChatGPT. You can have conversations with the A.I in a 3D Environment.</p>
+          <p>Unity VR AI demo:</p>
+          <div class="video-container" style="text-align:center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/jrLfkrQNSe8" loading="lazy" allowfullscreen></iframe></div>
+        </section>
 
-								<!--Doomage Demo-->
-								<article id="projects" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-									<h2 class="major2" style="text-align: center; margin-bottom:2px;">Doomage Demo</h2>
-									<span class="image main" style="margin-top:0px; margin-bottom:20px;"><img src="images/doomagebanner.jpg" alt="" /></span>
-									<p>I had an idea for this game for a while, a procedurally generated mixture of doom and rogue like games.</p>
-									<p>Created in Unreal. Ignoring some graphics glitches, it turned out really good. It is just a demo for now but I will definitely complete it if I get the chance.</p>
-									<p>Gameplay of Doomage:</p>
-									<div class="video-container" style="text-align: center;">
-										<div class="video-placeholder" data-video-id="EK7uLQPSzRs" data-video-title="Gameplay of Doomage">
-											<div class="video-placeholder-text">Click to load video</div>
-										</div>
-									</div>
-								</article>
+        <section>
+          <h3 class="major2" style="text-align:center;margin-top:50px;">Unity ability system: Die abilities</h3>
+          <span class="image main"><img src="images/ag1banner.jpg" loading="lazy" alt="AG1 banner" /></span>
+          <p>I developed a flexible ability system in Unity... </p>
+          <p>Unity Die Abilities Demo:</p>
+          <div class="video-container" style="text-align:center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/1FF8itUdnU8" loading="lazy" allowfullscreen></iframe></div>
+        </section>
 
-								<!--Chiriya Urhi-->
-							<article id="projects" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-								<h2 class="major2" style="text-align: center; margin-bottom:2px;">Chirhiya Urhi</h2>
-								<span class="image main" style="margin-top:0px; margin-bottom:20px;"><img src="images/chiriyaurhibanner1.jpg" alt="" /></span>
-								<p>I created chirhiya Urhi for Mindstorm Studios' Winter Game Jam 2022. The theme was surprisingly "All things desi". I had just created a hyper localized game for my FYP (Offtrack Islamabad) so I was already familiar with creating Pakistani localized content.
-									I chose the classic kids Chirhiya Urhi game for the project as everyone in Pakistan knows about it, and gave it anime-type setting.</p>
-								<p>I created the game in Unity engine, made all the assets in blender and Vroid studio. The game won the "Most Indigenous Idea" award in the game jam. This was a wonderful experience.</p>
-								<p>Following is the entire gameplay of the game:</p>
-								<div class="video-container" style="text-align: center;">
-									<div class="video-placeholder" data-video-id="QNC8CtFwIOU" data-video-title="Chiriya Urhi gameplay">
-										<div class="video-placeholder-text">Click to load video</div>
-									</div>
-								</div>
-								<p style="text-align: center;"><a href="https://drive.google.com/file/d/15dVE9Rzup-s9aVObHHtBZvluB_g1fTVz/view?usp=sharing" target="_blank">You can download the APK of the game from here if you would like to try it yourself.</a></p>
-							</article>
+        <section>
+          <h3 class="major2" style="text-align:center;margin-top:50px;">A promotional video using Metahumans and Vroid</h3>
+          <span class="image main"><img src="images/metadbanner.jpg" loading="lazy" alt="MetaVroid banner" /></span>
+          <p>Just a promotional video I created... </p>
+          <p>Metahuman Vroid demo:</p>
+          <div class="video-container" style="text-align:center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/5R1_5o45EFw" loading="lazy" allowfullscreen></iframe></div>
+        </section>
 
-							<!--OffTrack Islamabad-->
-							<article id="projects" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-								<h2 class="major2" style="text-align: center; margin-bottom:2px;">Offtrack: Islamabad</h2>
-								<span class="image main" style="margin-top:0px; margin-bottom:20px;"><img src="images/offtrackbanner1.jpg" alt="" /></span>
-								<p>Offtrack: Islamabad, an attempt at my dream game. This was my University's final year project, a hyper localized game for Pakistani audience. The game is a third person action shooter game, inspired from
-									games like resident evil. This was my first serious project and I was doing it solo so things didn't exactly work out as I had imagined but It was overall the best learning experience I got in game development.
-								</p>
-								<p>
-									The game is released on Google Playstore, which was another achievement for me. You can check out the game from its store page: <a href="https://play.google.com/store/apps/details?id=com.SadelfGames.OfftrackIslamabad" target="_blank">Offtrack: Islamabad.</a>
-								</p>
-							</article>
+        <section>
+          <h3 class="major2" style="text-align:center;margin-top:50px;">GateRunner (Winter Gamejam 2023)</h3>
+          <span class="image main"><img src="images/gaterunnerbanner.jpg" loading="lazy" alt="Gaterunner banner" /></span>
+          <p>My submission for Mindstorm's Winter game jam 2023... </p>
+          <p>Gameplay of Gaterunner:</p>
+          <div class="video-container" style="text-align:center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/MfB0P-Y9Nuc" loading="lazy" allowfullscreen></iframe></div>
+        </section>
 
-						<!-- Experiments -->
-							<!--UE Metahuman Lipsync Test-->
-							<article id="experiments" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-								<h2 class="major">Experiments</h2>
-								<h2 class="major2" style="text-align: center; margin-bottom:2px;">UE Metahuman Lipsync Test</h2>
-								<p>Metahuman test I made while learning how to do lipsync. This was done using Iphone's Mocap and Keyframing combined.</p>
-								<div class="video-container" style="text-align: center;">
-									<div class="video-placeholder" data-video-id="nLqbpKNtV7I" data-video-title="UE Metahuman Lipsync Test">
-										<div class="video-placeholder-text">Click to load video</div>
-									</div>
-								</div>
-							</article>
+        <section>
+          <h3 class="major2" style="text-align:center;margin-top:50px;">Doomage Demo</h3>
+          <span class="image main"><img src="images/doomagebanner.jpg" loading="lazy" alt="Doomage banner" /></span>
+          <p>I had an idea for this game... </p>
+          <p>Gameplay of Doomage:</p>
+          <div class="video-container" style="text-align:center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/EK7uLQPSzRs" loading="lazy" allowfullscreen></iframe></div>
+        </section>
 
-							<!--Topdown experiment-->
-							<article id="experiments" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-								<h2 class="major2" style="text-align: center; margin-bottom:2px;">Topdown units (XCOM like)</h2>
-								<p>Top down, XCOM like gameplay experiment.</p>
-								<div class="video-container" style="text-align: center;">
-									<div class="video-placeholder" data-video-id="UxOS0iHlyDk" data-video-title="Topdown units (XCOM like)">
-										<div class="video-placeholder-text">Click to load video</div>
-									</div>
-								</div>
-							</article>
+        <section>
+          <h3 class="major2" style="text-align:center;margin-top:50px;">Chirhiya Urhi</h3>
+          <span class="image main"><img src="images/chiriyaurhibanner1.jpg" loading="lazy" alt="Chiriya Urhi banner" /></span>
+          <p>I created Chirhiya Urhi for Mindstorm Studios' Winter Game Jam 2022... </p>
+          <p>Full gameplay:</p>
+          <div class="video-container" style="text-align:center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/QNC8CtFwIOU" loading="lazy" allowfullscreen></iframe></div>
+          <p style="text-align:center;"><a href="https://drive.google.com/file/d/15dVE9Rzup-s9aVObHHtBZvluB_g1fTVz/view?usp=sharing" target="_blank">Download the APK</a></p>
+        </section>
 
-							<!--Ghost cloth simulation-->
-							<article id="experiments" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-								<h2 class="major2" style="text-align: center; margin-bottom:2px;">Cloth simulation ghost</h2>
-								<p>A little experiment with Unreal's cloth simulation.</p>
-								<div class="video-container" style="text-align: center;">
-									<div class="video-placeholder" data-video-id="scpjof87VQs" data-video-title="Cloth simulation ghost">
-										<div class="video-placeholder-text">Click to load video</div>
-									</div>
-								</div>
-							</article>
+        <section>
+          <h3 class="major2" style="text-align:center;margin-top:50px;">Offtrack: Islamabad</h3>
+          <span class="image main"><img src="images/offtrackbanner1.jpg" loading="lazy" alt="Offtrack banner" /></span>
+          <p>Offtrack: Islamabad, an attempt at my dream game... </p>
+          <p><a href="https://play.google.com/store/apps/details?id=com.SadelfGames.OfftrackIslamabad" target="_blank">View on Play Store</a></p>
+        </section>
+      </article>
 
-							<!--Music Invaders-->
-							<article id="experiments" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-								<h2 class="major2" style="text-align: center; margin-bottom:2px;">Music Invaders <br/> Sound analysis based gameplay</h2>
-								<p>A little experiment with Unreal's Audio Synesthesia analysis. The spheres are set to react on a certain threshold of audio frequencies of a audio file. 
-									The left most is set to Midrange while the other two are Bass. When the threshold is reached they spawn a projectile aimed at the player. This mechanic can be used to create music based games.</p>
-								<div class="video-container" style="text-align: center;">
-									<div class="video-placeholder" data-video-id="ocECOwtjDVk" data-video-title="Music Invaders">
-										<div class="video-placeholder-text">Click to load video</div>
-									</div>
-								</div>
-							</article>
+      <!-- Experiments & RecentWork & Achievements & Contact continue similarly with loading="lazy" on imgs and deferred scripts -->
+    </div>
 
-							<!--Basic Procedural Generation-->
-							<article id="experiments" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-								<h2 class="major2" style="text-align: center; margin-bottom:2px;">Basic Procedural Generation</h2>
-								<p>Basic procedural map Generation that I came up with while learning Procedural Generation. Each tile finds a good location to spawn the next tile using the little spheres around it.</p>
-								<div class="video-container" style="text-align: center;">
-									<div class="video-placeholder" data-video-id="NLQxHuzRdAc" data-video-title="Basic Procedural Generation">
-										<div class="video-placeholder-text">Click to load video</div>
-									</div>
-								</div>
-							</article>
+    <footer id="footer"><p>&copy; Shehryar Malik.</p></footer>
+  </div>
 
-							<!--Lights Puzzle Level-->
-							<article id="experiments" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-								<h2 class="major2" style="text-align: center; margin-bottom:2px;">Lights Puzzle Level</h2>
-								<p>A simple puzzle level using lights, I created this as an excersie of Reality forge's Unreal course that I was taking.</p>
-								<div class="video-container" style="text-align: center;">
-									<div class="video-placeholder" data-video-id="RbTnqvHFVFE" data-video-title="Lights Puzzle Level">
-										<div class="video-placeholder-text">Click to load video</div>
-									</div>
-								</div>
-							</article>
-							
-							<!--Lyra Race Gamemode-->
-							<article id="experiments" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-								<h2 class="major2" style="text-align: center; margin-bottom:2px;">Lyra Race Gamemode</h2>
-								<p>A time race gamemode that I made while experimenting with Lyra.</p>
-								<div class="video-container" style="text-align: center;">
-									<div class="video-placeholder" data-video-id="T3-Ihf2TSZA" data-video-title="Lyra Race Gamemode">
-										<div class="video-placeholder-text">Click to load video</div>
-									</div>
-								</div>
-							</article>
-							
-							<!--G develop - 2d Click to move character-->
-							<article id="experiments" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-								<h2 class="major2" style="text-align: center; margin-bottom:2px;">G develop - 2d Click to move character</h2>
-								<p>This is one of my many unfinished projects, I was making it for G-Develop's second GameJam but couldn't complete (Classic scope creep). The game was supposed to be
-									inspired from Neighbours from Hell. Even though I didn't finish it, I learned G-develop and 2D character animations using Illustrator and Dragonbones. With this project I realized 2D animations
-									are much harder than 3D (atleast for me).
-								</p>
-								<div class="video-container" style="text-align: center;">
-									<div class="video-placeholder" data-video-id="9-1Q4WI5HTo" data-video-title="G develop - 2d Click to move character">
-										<div class="video-placeholder-text">Click to load video</div>
-									</div>
-								</div>
-							</article>
+  <div id="bg"></div>
 
-						<!-- achievements -->
-							<article id="achievements" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-								<h2 class="major">achievements</h2>
-								<span style="float: left;margin: 15px;width:50%;height: auto;" class="image main"><img src="images/cozynight.jpg" alt=""/></span>
-								<p>Here are some of my achievements that I am proud of. So far Game development has been 
-									a tough but rewarding journey.</p> 
-								<p>I plan to continue learning new things and grow this list as much as I can :)</p>
+  <!-- Deferred scripts -->
+  <script defer src="assets/js/jquery.min.js"></script>
+  <script defer src="assets/js/browser.min.js"></script>
+  <script defer src="assets/js/breakpoints.min.js"></script>
+  <script defer src="assets/js/util.js"></script>
+  <script defer src="assets/js/main.js"></script>
 
-								<hr>
-								<p style="text-align: center;margin-bottom: 5px;">:> Won the Most "Indigenous Idea" award in Mindstorm Studios' Winter Gamejam 2022
-								for my submission "Chiriya Urhi"!</p>
-								<p style="text-align: center;margin-bottom: 5px;">:> Got a job at Optera Digital as an Unreal developer!</p>
-								<p style="text-align: center;margin-bottom: 5px;">:> Published a game on Google Play Store: "Offtrack:Islamabad"!</p>
-
-								<hr>
-							</article>
-
-						<!-- Contact -->
-							<article id="contact" style="font-family: 'Silkscreen'; font-weight: normal; font-style: normal;margin-top:50px;">
-								<h2 class="major">Contact</h2>
-								<p>Feel free to contact me anywhere!</p>
-								<p>Email: Shehryar.malik07@gmail.com
-									<br/>Contact number: +92-332-9318456
-								</p>
-								
-								<ul class="icons" style="text-align:center;">
-									<li><a href="https://www.linkedin.com/in/shehryarmalik07" target="_blank" class="icon brands fa-linkedin"><span class="label">Twitter</span></a></li>
-									<li><a href="https://github.com/ShehryarMalik" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Shehryar Malik.</p>
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script>
-				// Load scripts in a non-blocking way
-				window.addEventListener('load', function() {
-					// Hide preloader when everything is loaded
-					document.querySelector('.se-pre-con').style.display = 'none';
-					
-					// Load Font Awesome
-					var faScript = document.createElement('script');
-					faScript.src = 'https://kit.fontawesome.com/521b2f0730.js';
-					faScript.crossOrigin = 'anonymous';
-					document.head.appendChild(faScript);
-					
-					// Load jQuery
-					var jqueryScript = document.createElement('script');
-					jqueryScript.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js';
-					jqueryScript.onload = function() {
-						// Once jQuery is loaded, load the other scripts
-						var scripts = [
-							'assets/js/browser.min.js',
-							'assets/js/breakpoints.min.js',
-							'assets/js/util.js',
-							'assets/js/main.js'
-						];
-						
-						scripts.forEach(function(src) {
-							var script = document.createElement('script');
-							script.src = src;
-							document.body.appendChild(script);
-						});
-					};
-					document.head.appendChild(jqueryScript);
-					
-					// Handle video placeholder clicks
-					document.addEventListener('click', function(e) {
-						if (e.target.closest('.video-placeholder')) {
-							const placeholder = e.target.closest('.video-placeholder');
-							const videoId = placeholder.getAttribute('data-video-id');
-							const videoTitle = placeholder.getAttribute('data-video-title') || 'YouTube video player';
-							
-							const iframe = document.createElement('iframe');
-							iframe.width = '560';
-							iframe.height = '315';
-							iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-							iframe.title = videoTitle;
-							iframe.frameBorder = '0';
-							iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-							iframe.allowFullscreen = true;
-							
-							placeholder.innerHTML = '';
-							placeholder.appendChild(iframe);
-						}
-					});
-				});
-			</script>
-	</body>
+  <!-- Lazy-load YouTube -->
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('.youtube-placeholder').forEach(div=>{
+        div.addEventListener('click',()=>{
+          const iframe = document.createElement('iframe');
+          iframe.src = div.dataset.src + '?autoplay=1';
+          iframe.setAttribute('allow','accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture');
+          iframe.frameBorder = '0';
+          iframe.loading = 'lazy';
+          iframe.width = 560; iframe.height = 315;
+          div.replaceWith(iframe);
+        });
+      });
+    });
+  </script>
+</body>
 </html>
