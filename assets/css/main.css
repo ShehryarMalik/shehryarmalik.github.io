@@ -683,6 +683,21 @@ input, select, textarea {
 		.icon.brands:before {
 			font-family: 'Font Awesome 5 Brands';
 		}
+		.icon-image {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 64px;
+			height: 64px;
+			border-radius: 50%;
+			background-color: #333; /* or same color as before */
+		}
+
+		.icon-image img {
+			width: 60%;
+			height: 60%;
+			object-fit: contain;
+		}
 
 /* Image */
 
