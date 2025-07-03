@@ -4,6 +4,7 @@
 		<title>Shehryar Malik's portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="preload" href="assets/css/main.css" as="style" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
@@ -19,7 +20,6 @@
 				justify-content: center;
 				align-items: center;
 				text-align: center;
-				color: white;
 			}
 			.video-placeholder {
 				background: #222;
@@ -60,7 +60,7 @@
 	<body class="is-preload">
 	<div class="se-pre-con"><h1>Loading..</h1></div>
 		<!-- Wrapper -->
-			<div id="wrapper" style="display:none;">
+			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
@@ -349,41 +349,57 @@
 			<div id="bg"></div>
 
 		<!-- Scripts -->
-			<!-- Load jQuery first -->
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-			<!-- Then load Font Awesome -->
-			<script src="https://kit.fontawesome.com/521b2f0730.js" crossorigin="anonymous"></script>
-			<!-- Then load other scripts -->
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			
 			<script>
-				// Wait for everything to load
-				$(window).on('load', function() {
-					// Hide preloader
-					$('.se-pre-con').fadeOut('slow');
-					// Show wrapper
-					$('#wrapper').fadeIn('slow');
+				// Load scripts in a non-blocking way
+				window.addEventListener('load', function() {
+					// Hide preloader when everything is loaded
+					document.querySelector('.se-pre-con').style.display = 'none';
+					
+					// Load Font Awesome
+					var faScript = document.createElement('script');
+					faScript.src = 'https://kit.fontawesome.com/521b2f0730.js';
+					faScript.crossOrigin = 'anonymous';
+					document.head.appendChild(faScript);
+					
+					// Load jQuery
+					var jqueryScript = document.createElement('script');
+					jqueryScript.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js';
+					jqueryScript.onload = function() {
+						// Once jQuery is loaded, load the other scripts
+						var scripts = [
+							'assets/js/browser.min.js',
+							'assets/js/breakpoints.min.js',
+							'assets/js/util.js',
+							'assets/js/main.js'
+						];
+						
+						scripts.forEach(function(src) {
+							var script = document.createElement('script');
+							script.src = src;
+							document.body.appendChild(script);
+						});
+					};
+					document.head.appendChild(jqueryScript);
 					
 					// Handle video placeholder clicks
-					$(document).on('click', '.video-placeholder', function() {
-						const placeholder = $(this);
-						const videoId = placeholder.data('video-id');
-						const videoTitle = placeholder.data('video-title') || 'YouTube video player';
-						
-						const iframe = $('<iframe>', {
-							width: '560',
-							height: '315',
-							src: `https://www.youtube.com/embed/${videoId}?autoplay=1`,
-							title: videoTitle,
-							frameborder: '0',
-							allow: 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture',
-							allowfullscreen: true
-						});
-						
-						placeholder.html(iframe);
+					document.addEventListener('click', function(e) {
+						if (e.target.closest('.video-placeholder')) {
+							const placeholder = e.target.closest('.video-placeholder');
+							const videoId = placeholder.getAttribute('data-video-id');
+							const videoTitle = placeholder.getAttribute('data-video-title') || 'YouTube video player';
+							
+							const iframe = document.createElement('iframe');
+							iframe.width = '560';
+							iframe.height = '315';
+							iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+							iframe.title = videoTitle;
+							iframe.frameBorder = '0';
+							iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+							iframe.allowFullscreen = true;
+							
+							placeholder.innerHTML = '';
+							placeholder.appendChild(iframe);
+						}
 					});
 				});
 			</script>
