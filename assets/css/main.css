@@ -1724,3 +1724,26 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+
+		.se-pre-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b0f12;
+}
+
+.loader-mark {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.loader-mark span {
+    display: none;
+}
