@@ -9,6 +9,66 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/portfolio-refresh.css">
     <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
+    <style>
+        .tickmode-cover {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 250px;
+            overflow: hidden;
+            background: #090d10;
+            border: 1px solid rgba(255,255,255,.08);
+        }
+        .tickmode-cover::before,
+        .tickmode-cover::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid rgba(225,232,235,.13);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .tickmode-cover::before { width: 205px; height: 205px; }
+        .tickmode-cover::after { width: 165px; height: 165px; border-color: rgba(225,232,235,.08); }
+        .tickmode-cover .tickmode-cover-inner {
+            position: relative;
+            z-index: 1;
+            padding: 34px 18px;
+            text-align: center;
+        }
+        .tickmode-cover .tickmode-mark {
+            display: block;
+            margin-bottom: 17px;
+            color: #dce2e4;
+            font-size: 11px;
+            letter-spacing: .42em;
+        }
+        .tickmode-cover .tickmode-time {
+            display: block;
+            color: #f0f2f2;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: clamp(27px, 4vw, 43px);
+            font-weight: 300;
+            letter-spacing: .06em;
+            font-variant-numeric: tabular-nums;
+        }
+        .tickmode-cover .tickmode-caption {
+            display: block;
+            margin-top: 15px;
+            color: #849095;
+            font-size: 9px;
+            letter-spacing: .24em;
+        }
+        .tickmode-project-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+        @media (max-width: 736px) {
+            .tickmode-cover { min-height: 210px; }
+            .tickmode-cover::before { width: 180px; height: 180px; }
+            .tickmode-cover::after { width: 145px; height: 145px; }
+        }
+    </style>
     <script defer src="assets/js/jquery.min.js"></script>
     <script defer src="assets/js/browser.min.js"></script>
     <script defer src="assets/js/breakpoints.min.js"></script>
@@ -94,12 +154,24 @@
                 </section>
                 <div class="project-grid">
                     <section class="project-card">
-                        <div class="project-image"><img src="images/gnetworkbanner.jpg" alt="GNetwork" loading="lazy"><span class="image-index">CASE 002</span></div>
-                        <div class="project-body"><div class="project-kicker">INDEPENDENT / BACKEND / CLOUD</div><div class="project-title-row"><div><h3>GNetwork</h3><p class="project-role">Independent project</p></div><span class="project-type">02 — PERSONAL</span></div>
-                            <p>An independent multiplayer platform built around a Go backend and cloud-hosted services. The project explores server-side architecture, persistent online systems and real-time multiplayer infrastructure.</p>
-                            <div class="project-tech"><span>Go</span><span>Linux</span><span>Oracle Cloud</span><span>Networking</span><span>Unity</span></div>
-                            <ul class="compact-list"><li>Developed the backend foundation for multiplayer functionality.</li><li>Deployed and ran backend services on an Oracle Cloud virtual machine.</li><li>Worked on communication between game clients and server-side systems.</li></ul>
- 
+                        <div class="project-image tickmode-cover" role="img" aria-label="TickMode minimal interval timer display">
+                            <div class="tickmode-cover-inner">
+                                <span class="tickmode-mark">TICKMODE</span>
+                                <span class="tickmode-time">00:30:00</span>
+                                <span class="tickmode-caption">INTERVAL / SIGNAL / TIME</span>
+                            </div>
+                            <span class="image-index">CASE 002</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-kicker">INDEPENDENT / ANDROID / PERSONAL EXPERIMENT</div>
+                            <div class="project-title-row"><div><h3>TickMode</h3><p class="project-role">Creator &amp; Android Developer</p></div><span class="project-type">02 — PERSONAL</span></div>
+                            <p>An Android interval timer for repeatable vibration and sound signals. Built with Kotlin and Jetpack Compose, with a foreground service, local session history and configurable signals.</p>
+                            <p>The idea was inspired by Whiterose's relationship with time in <em>Mr. Robot</em>. It's a personal experiment in whether deliberate, recurring signals can make me more aware of how I spend my time.</p>
+                            <div class="project-tech"><span>Kotlin</span><span>Jetpack Compose</span><span>Android</span><span>Foreground Services</span><span>Gradle</span></div>
+                            <div class="tickmode-project-actions">
+                                <a href="https://github.com/ShehryarMalik/TickMode" class="button small" target="_blank" rel="noopener">View source ↗</a>
+                                <a href="https://github.com/ShehryarMalik/TickMode/releases/latest" class="button small" target="_blank" rel="noopener">Download APK ↗</a>
+                            </div>
                         </div>
                     </section>
                     <section class="project-card">
@@ -109,6 +181,14 @@
                             <div class="project-tech"><span>React</span><span>TypeScript</span><span>Supabase</span><span>PostgreSQL</span><span>Edge Functions</span></div>
                             <ul class="compact-list"><li>Built backend functionality using Supabase and Edge Functions.</li><li>Implemented database-backed pattern storage and discovery.</li><li>Developed an interactive shared archive and world map.</li><li>Deployed the application through Cloudflare Pages.</li></ul>
                             <div class="project-actions"><a href="https://patternkin.pages.dev/" class="button small" target="_blank" rel="noopener">Visit live project ↗</a></div>
+                        </div>
+                    </section>
+                    <section class="project-card">
+                        <div class="project-image"><img src="images/gnetworkbanner.jpg" alt="GNetwork" loading="lazy"><span class="image-index">CASE 004</span></div>
+                        <div class="project-body"><div class="project-kicker">INDEPENDENT / BACKEND / CLOUD</div><div class="project-title-row"><div><h3>GNetwork</h3><p class="project-role">Independent project</p></div><span class="project-type">04 — PERSONAL</span></div>
+                            <p>An independent multiplayer platform built around a Go backend and cloud-hosted services. The project explores server-side architecture, persistent online systems and real-time multiplayer infrastructure.</p>
+                            <div class="project-tech"><span>Go</span><span>Linux</span><span>Oracle Cloud</span><span>Networking</span><span>Unity</span></div>
+                            <ul class="compact-list"><li>Developed the backend foundation for multiplayer functionality.</li><li>Deployed and ran backend services on an Oracle Cloud virtual machine.</li><li>Worked on communication between game clients and server-side systems.</li></ul>
                         </div>
                     </section>
                 </div>
